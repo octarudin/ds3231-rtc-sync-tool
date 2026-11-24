@@ -5,9 +5,9 @@ Firmware ditujukan untuk Arduino Nano ATmega328P dengan bootloader baru, sedangk
 aplikasi GUI Windows mengambil waktu lokal komputer dan mengirimkannya ke RTC.
 
 <p align="center">
-  <img src="docs/images/rtc-sync-gui.png" alt="Tampilan aplikasi RTC DS3231 Serial Sync" width="680">
+  <img src="docs/images/rtc-sync-gui.png" alt="Tampilan aplikasi DS3231 RTC Sync Tool" width="680">
   <br>
-  <em>Gambar 1. Aplikasi RTC DS3231 Serial Sync untuk Windows.</em>
+  <em>Gambar 1. Aplikasi DS3231 RTC Sync Tool untuk Windows.</em>
 </p>
 
 ## Fitur
@@ -47,7 +47,7 @@ aplikasi GUI Windows mengambil waktu lokal komputer dan mengirimkannya ke RTC.
    ```
 
 5. Tutup Serial Monitor atau aplikasi lain yang sedang memakai port Arduino.
-6. Jalankan [`dist/RTC-DS3231-Sync.exe`](dist/RTC-DS3231-Sync.exe).
+6. Jalankan [`dist/DS3231-RTC-Sync-Tool.exe`](dist/DS3231-RTC-Sync-Tool.exe).
 7. Pilih port COM Arduino, lalu klik **Connect**.
 8. Klik **Sinkronkan dengan waktu komputer**.
 9. Pastikan pesan `OK: waktu RTC diatur` muncul pada log serial.
@@ -134,7 +134,7 @@ python -m pip install pyserial pyinstaller PySide6-Essentials
 powershell -ExecutionPolicy Bypass -File tools\build_gui.ps1
 ```
 
-Hasil build akan tersedia sebagai `dist\RTC-DS3231-Sync.exe`.
+Hasil build akan tersedia sebagai `dist\DS3231-RTC-Sync-Tool.exe`.
 
 ## Lisensi
 
