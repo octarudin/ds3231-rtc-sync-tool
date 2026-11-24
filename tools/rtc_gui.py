@@ -5,10 +5,11 @@ import queue
 import sys
 import threading
 from datetime import datetime
+from pathlib import Path
 
 import serial
 from PySide6.QtCore import QTimer
-from PySide6.QtGui import QCloseEvent, QFont
+from PySide6.QtGui import QCloseEvent, QFont, QIcon
 from PySide6.QtWidgets import (
     QApplication,
     QComboBox,
@@ -27,12 +28,24 @@ from PySide6.QtWidgets import (
 from serial.tools import list_ports
 
 
+def resource_path(relative_path: str) -> str:
+    """Resolve aset saat dijalankan dari source maupun bundle PyInstaller."""
+    bundle_directory = getattr(sys, "_MEIPASS", None)
+    base_directory = (
+        Path(bundle_directory)
+        if bundle_directory
+        else Path(__file__).resolve().parents[1]
+    )
+    return str(base_directory / relative_path)
+
+
 class RtcSerialGui(QMainWindow):
     BAUD_RATE = 115200
 
     def __init__(self) -> None:
         super().__init__()
         self.setWindowTitle("RTC DS3231 Serial Sync")
+        self.setWindowIcon(QIcon(resource_path("assets/rtc-sync.ico")))
         self.resize(680, 520)
         self.setMinimumSize(600, 450)
 
@@ -238,6 +251,7 @@ class RtcSerialGui(QMainWindow):
 
 def main() -> int:
     application = QApplication(sys.argv)
+    application.setWindowIcon(QIcon(resource_path("assets/rtc-sync.ico")))
     window = RtcSerialGui()
     window.show()
     return application.exec()
