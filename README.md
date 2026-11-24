@@ -4,7 +4,11 @@ Program untuk mengatur dan membaca waktu RTC DS3231 melalui koneksi serial.
 Firmware ditujukan untuk Arduino Nano ATmega328P dengan bootloader baru, sedangkan
 aplikasi GUI Windows mengambil waktu lokal komputer dan mengirimkannya ke RTC.
 
-![Tampilan RTC DS3231 Serial Sync](docs/images/rtc-sync-gui.png)
+<p align="center">
+  <img src="docs/images/rtc-sync-gui.png" alt="Tampilan aplikasi RTC DS3231 Serial Sync" width="680">
+  <br>
+  <em>Gambar 1. Aplikasi RTC DS3231 Serial Sync untuk Windows.</em>
+</p>
 
 ## Fitur
 
