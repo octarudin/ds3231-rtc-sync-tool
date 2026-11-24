@@ -45,7 +45,7 @@ class RtcSerialGui(QMainWindow):
     def __init__(self) -> None:
         super().__init__()
         self.setWindowTitle("RTC DS3231 Serial Sync")
-        self.setWindowIcon(QIcon(resource_path("assets/rtc-sync.ico")))
+        self.setWindowIcon(QIcon(resource_path("assets/rtc-sync-window.png")))
         self.resize(680, 520)
         self.setMinimumSize(600, 450)
 
@@ -251,7 +251,7 @@ class RtcSerialGui(QMainWindow):
 
 def main() -> int:
     application = QApplication(sys.argv)
-    application.setWindowIcon(QIcon(resource_path("assets/rtc-sync.ico")))
+    application.setWindowIcon(QIcon(resource_path("assets/rtc-sync-window.png")))
     window = RtcSerialGui()
     window.show()
     return application.exec()

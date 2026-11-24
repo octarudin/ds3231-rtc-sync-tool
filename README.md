@@ -107,7 +107,7 @@ set 2026-11-24 11:16:02
 
 ```text
 .
-├── assets/                Icon aplikasi Windows
+├── assets/                Icon EXE dan icon transparan untuk jendela
 ├── docs/images/           Screenshot untuk dokumentasi
 ├── dist/                  Aplikasi Windows siap pakai
 ├── src/

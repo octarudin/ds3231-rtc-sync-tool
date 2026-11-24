@@ -7,7 +7,7 @@ python -m PyInstaller `
     --windowed `
     --exclude-module tkinter `
     --icon "assets\rtc-sync.ico" `
-    --add-data "assets\rtc-sync.ico;assets" `
+    --add-data "assets\rtc-sync-window.png;assets" `
     --name "RTC-DS3231-Sync" `
     tools\rtc_gui.py
 
